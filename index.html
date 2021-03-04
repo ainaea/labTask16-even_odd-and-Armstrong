@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabTask 16</title>
+</head>
+<body>
+    <button ondblclick="task1()">Task1- Even and Odd numbers below input</button><br>
+    <button ondblclick="task2()">Task2- Armstrong numbers</button>
+    
+    <script>
+        function task1(){
+            var entry, x;
+        do {
+                entry = parseInt(prompt(`Enter an endpoint of atleast 100 \n new line`)); 
+            } while ((entry != entry) || entry <= 100 || entry >= 1000);
+
+        for (let i=0; i<=entry; i++){
+            if(i%2 == 0){ document.write(`${i} is even <br>`)}
+            else{ document.write(`${i} is odd <br>`) };
+        }
+
+        }
+        
+    </script>
+    <script>
+        function task2(){
+            for(let i=100; i<1000; i++){
+            var h, t, u;
+            h = parseInt(i/100);
+            t = parseInt( (i%100)/10);
+            u = parseInt( (i%100)%10);
+            if(h**3 + t**3 + u**3 == i){
+                document.write(`${i} is an Armstrong number <br>`);
+            }
+
+        }
+        }
+        
+    </script>
+</body>
+</html>
