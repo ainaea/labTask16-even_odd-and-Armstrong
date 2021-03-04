@@ -12,14 +12,14 @@
     <script>
         function task1(){
             var entry, x;
-        do {
-                entry = parseInt(prompt(`Enter an endpoint of atleast 100 \n new line`)); 
-            } while ((entry != entry) || entry <= 100 || entry >= 1000);
+            do {
+                    entry = parseInt(prompt(`Enter an endpoint of atleast 100`)); 
+            } while ((entry != entry) || entry < 100 || entry > 1000);
 
-        for (let i=0; i<=entry; i++){
-            if(i%2 == 0){ document.write(`${i} is even <br>`)}
-            else{ document.write(`${i} is odd <br>`) };
-        }
+            for (let i=0; i<=entry; i++){
+                if(i%2 == 0){ document.write(`${i} is even <br>`)}
+                else{ document.write(`${i} is odd <br>`) };
+            }
 
         }
         
@@ -27,15 +27,15 @@
     <script>
         function task2(){
             for(let i=100; i<1000; i++){
-            var h, t, u;
-            h = parseInt(i/100);
-            t = parseInt( (i%100)/10);
-            u = parseInt( (i%100)%10);
-            if(h**3 + t**3 + u**3 == i){
-                document.write(`${i} is an Armstrong number <br>`);
-            }
+                var h, t, u;
+                h = parseInt(i/100);
+                t = parseInt( (i%100)/10);
+                u = parseInt( (i%100)%10);
+                if(h**3 + t**3 + u**3 == i){
+                    document.write(`${i} is an Armstrong number <br>`);
+                }
 
-        }
+            }
         }
         
     </script>
